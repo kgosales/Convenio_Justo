@@ -181,6 +181,10 @@ h2 {
             display: flex;
             flex-direction: column;
             gap: 20px;
+
+            p {
+                text-align: justify;
+            }
         }
     }
 }
@@ -195,6 +199,10 @@ h2 {
             display: flex;
             flex-direction: column;
             gap: 20px;
+
+            p {
+                text-align: justify;
+            }
         }
 
         img {
@@ -213,7 +221,7 @@ h2 {
 
         .box-depoimento {
             width: 33.3%;
-            padding: 10px;
+            padding: 20px;
             border-radius: 10px;
             background-color: var(--color-green-mid);
             color: var(--color-white);
@@ -225,8 +233,8 @@ h2 {
             position: relative;
 
             img {
-                width: 60px;
-                height: 60px;
+                width: 75px;
+                height: 75px;
                 border-radius: 50%;
                 position: absolute;
                 top: -40px;
@@ -242,6 +250,38 @@ h2 {
 
             .texto-depoimento {
                 flex-grow: 1;
+            }
+        }
+    }
+}
+
+#contato {
+    background-color: var(--color-green-mid);
+
+    #container-contato {
+        display: flex;
+        gap: 40px;
+        color: var(--color-white);
+
+        p {
+            width: 50%;
+            text-align: justify;
+        }
+
+        #container-contato-vias {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .box-contato-via {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                img {
+                    width: 25px;
+                }
             }
         }
     }

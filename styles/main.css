@@ -211,6 +211,9 @@ h2 {
   flex-direction: column;
   gap: 20px;
 }
+#o-que-fazemos #container-o-que-fazemos #container-o-que-fazemos-texto p {
+  text-align: justify;
+}
 #sobre #container-sobre {
   display: flex;
   gap: 40px;
@@ -220,6 +223,9 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+#sobre #container-sobre #container-sobre-texto p {
+  text-align: justify;
 }
 #sobre #container-sobre img {
   width: 40%;
@@ -233,7 +239,7 @@ h2 {
 }
 #depoimentos #container-depoimentos .box-depoimento {
   width: 33.3%;
-  padding: 10px;
+  padding: 20px;
   border-radius: 10px;
   background-color: var(--color-green-mid);
   color: var(--color-white);
@@ -245,8 +251,8 @@ h2 {
   position: relative;
 }
 #depoimentos #container-depoimentos .box-depoimento img {
-  width: 60px;
-  height: 60px;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
   position: absolute;
   top: -40px;
@@ -260,6 +266,32 @@ h2 {
 }
 #depoimentos #container-depoimentos .box-depoimento .texto-depoimento {
   flex-grow: 1;
+}
+#contato {
+  background-color: var(--color-green-mid);
+}
+#contato #container-contato {
+  display: flex;
+  gap: 40px;
+  color: var(--color-white);
+}
+#contato #container-contato p {
+  width: 50%;
+  text-align: justify;
+}
+#contato #container-contato #container-contato-vias {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#contato #container-contato #container-contato-vias .box-contato-via {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#contato #container-contato #container-contato-vias .box-contato-via img {
+  width: 25px;
 }
 footer {
   width: 100%;
