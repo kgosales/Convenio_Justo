@@ -21,7 +21,7 @@ body {
     height: 100%;
 }
 
-h2{
+h2 {
     font-size: 32px;
     font-weight: 600;
     text-transform: uppercase;
@@ -37,6 +37,7 @@ h2{
     display: flex;
     flex-direction: column;
     align-items: start;
+    gap: 20px;
 }
 
 .section-abas {
@@ -174,14 +175,86 @@ h2{
     }
 }
 
-footer{
+#o-que-fazemos {
+    #container-o-que-fazemos {
+        #container-o-que-fazemos-texto {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+}
+
+#sobre {
+    #container-sobre {
+        display: flex;
+        gap: 40px;
+
+        #container-sobre-texto {
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        img {
+            width: 40%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+    }
+}
+
+#depoimentos {
+    #container-depoimentos {
+        margin-top: 50px;
+        display: flex;
+        gap: 20px;
+
+        .box-depoimento {
+            width: 33.3%;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: var(--color-green-mid);
+            color: var(--color-white);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 10px;
+            position: relative;
+
+            img {
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                position: absolute;
+                top: -40px;
+            }
+
+            .nome-depoimento {
+                width: 100%;
+                text-align: center;
+                color: var(--color-highlight);
+                font-size: 18px;
+                font-weight: 600;
+            }
+
+            .texto-depoimento {
+                flex-grow: 1;
+            }
+        }
+    }
+}
+
+footer {
     width: 100%;
     background-color: var(--color-green-high);
     display: flex;
     align-items: center;
     justify-content: center;
 
-    p{
+    p {
         color: var(--color-white);
         padding: 10px 0;
     }

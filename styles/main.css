@@ -87,6 +87,7 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: start;
+  gap: 20px;
 }
 .section-abas {
   padding: 40px 0;
@@ -204,6 +205,61 @@ h2 {
   width: 80%;
   position: absolute;
   bottom: 0;
+}
+#o-que-fazemos #container-o-que-fazemos #container-o-que-fazemos-texto {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#sobre #container-sobre {
+  display: flex;
+  gap: 40px;
+}
+#sobre #container-sobre #container-sobre-texto {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#sobre #container-sobre img {
+  width: 40%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+#depoimentos #container-depoimentos {
+  margin-top: 50px;
+  display: flex;
+  gap: 20px;
+}
+#depoimentos #container-depoimentos .box-depoimento {
+  width: 33.3%;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: var(--color-green-mid);
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+}
+#depoimentos #container-depoimentos .box-depoimento img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: absolute;
+  top: -40px;
+}
+#depoimentos #container-depoimentos .box-depoimento .nome-depoimento {
+  width: 100%;
+  text-align: center;
+  color: var(--color-highlight);
+  font-size: 18px;
+  font-weight: 600;
+}
+#depoimentos #container-depoimentos .box-depoimento .texto-depoimento {
+  flex-grow: 1;
 }
 footer {
   width: 100%;
