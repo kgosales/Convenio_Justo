@@ -66,20 +66,42 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
-  font-size: 14px;
 }
-#inicio {
-  width: 100vw;
-  height: 100vh;
-  background: linear-gradient(to right, var(--color-green-high), var(--color-green-mid));
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+h2 {
+  font-size: 32px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--color-highlight);
+  border-bottom: var(--color-highlight) 3px solid;
+}
+.container {
+  width: 100%;
+  max-width: 1216px;
+  margin: 0 auto;
+  padding: 0 2%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
+}
+.section-abas {
+  padding: 40px 0;
+}
+#inicio {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to right, var(--color-green-high), var(--color-green-mid));
 }
 #inicio header {
   width: 100%;
+  max-width: 1216px;
   height: 15%;
-  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 2%;
   display: flex;
   align-items: center;
   gap: 60px;
@@ -109,8 +131,10 @@
 }
 #inicio #banner {
   width: 100%;
+  max-width: 1216px;
   height: 85%;
-  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 2%;
   display: flex;
   align-items: center;
   gap: 60px;
@@ -128,18 +152,20 @@
   color: var(--color-highlight);
   font-family: "merriweather", serif;
   margin: 40px 0;
-  font-size: 76px;
+  font-size: 72px;
   font-weight: 700;
 }
-#inicio #banner #banner-texto h2 {
+#inicio #banner #banner-texto h2#pergunta {
   font-size: 38px;
   max-width: 400px;
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
+  color: var(--color-white);
+  border: none;
 }
-#inicio #banner #banner-texto h2 span {
-  font-size: 42px;
+#inicio #banner #banner-texto h2#pergunta span {
+  font-size: 38px;
   color: var(--color-highlight);
 }
 #inicio #banner #banner-texto p {
@@ -178,4 +204,15 @@
   width: 80%;
   position: absolute;
   bottom: 0;
+}
+footer {
+  width: 100%;
+  background-color: var(--color-green-high);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer p {
+  color: var(--color-white);
+  padding: 10px 0;
 }
