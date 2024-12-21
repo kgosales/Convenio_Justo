@@ -189,6 +189,122 @@ h2 {
     }
 }
 
+#formulario {
+    background-color: var(--color-green-high);
+
+    #container-formulario {
+        width: 100%;
+
+        form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            color: var(--color-white);
+
+            .box-formulario-input {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                input {
+                    width: 100%;
+                    padding: 10px;
+                    border-radius: 10px;
+                    border: none;
+                }
+
+                textarea {
+                    width: 100%;
+                    height: 200px;
+                    padding: 10px;
+                    border-radius: 10px;
+                    border: none;
+                    resize: none;
+                }
+
+                select {
+                    width: 100%;
+                    padding: 10px;
+                    border-radius: 10px;
+                    border: none;
+                }
+            }
+
+            .box-formulario-endereco {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                #logradouro {
+                    width: 100%;
+                    display: flex;
+                    gap: 20px;
+
+                    .box-formulario-input {
+                        &:first-child {
+                            width: 80%;
+                        }
+
+                        &:last-child {
+                            width: 20%;
+                        }
+                    }
+                }
+
+                #complementos {
+                    width: 100%;
+                    display: flex;
+                    gap: 20px;
+
+                    .box-formulario-input {
+                        &:nth-child(1) {
+                            width: 40%;
+                        }
+
+                        &:nth-child(2) {
+                            width: 40%;
+                        }
+
+                        &:nth-child(3) {
+                            width: 20%;
+                        }
+                    }
+                }
+            }
+
+            .box-formulario-contato {
+                width: 100%;
+                display: flex;
+                gap: 20px;
+            }
+
+            input[type="submit"] {
+                width: 85%;
+                max-width: 300px;
+                height: 50px;
+                margin-top: 20px;
+                border: none;
+                border-radius: 10px;
+                background-color: transparent;
+                color: var(--color-highlight);
+                border: 2px solid var(--color-highlight);
+                font-weight: 600;
+                cursor: pointer;
+                transition: 0.3s;
+
+                &:hover {
+                    background-color: var(--color-highlight);
+                    color: var(--color-white);
+                }
+            }
+        }
+    }
+}
+
 #sobre {
     #container-sobre {
         display: flex;
