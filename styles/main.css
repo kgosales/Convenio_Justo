@@ -241,7 +241,7 @@ h2 {
   width: 33.3%;
   padding: 20px;
   border-radius: 10px;
-  background-color: var(--color-green-mid);
+  background-color: var(--color-green-high);
   color: var(--color-white);
   display: flex;
   flex-direction: column;
