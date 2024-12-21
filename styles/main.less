@@ -415,3 +415,57 @@ footer {
         padding: 10px 0;
     }
 }
+
+@media screen and (max-width: 720px) {
+
+    .container{
+        padding: 0 4%;
+    }
+
+    #inicio {
+        header {
+            #menu {
+                display: none;
+            }
+        }
+    }
+
+    #sobre {
+        #container-sobre {
+            flex-direction: column-reverse;
+
+            #container-sobre-texto {
+                width: 100%;
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    #depoimentos {
+        #container-depoimentos {
+            flex-direction: column;
+            gap: 60px;
+
+            .box-depoimento {
+                width: 100%;
+            }
+        }
+    }
+
+    #contato {
+        #container-contato {
+            flex-direction: column;
+
+            p {
+                width: 100%;
+            }
+
+            #container-contato-vias {
+                width: 100%;
+            }
+        }
+    }
+}
