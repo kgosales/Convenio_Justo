@@ -2,57 +2,65 @@
   font-family: 'Merriweather';
   font-style: italic;
   font-weight: 300;
+  font-stretch: normal;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4l0qyriQwlOrhSvowK_l5-eR7lXcf_.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/merriweather/v31/u-4B0qyriQwlOrhSvowK_l5-eTxCVx0ZbwLvKH2Gk9hLmp0v5yA-xXPqCzLvPee1XYk_XSf-FmScUF3w.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Merriweather';
   font-style: italic;
   font-weight: 400;
+  font-stretch: normal;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4m0qyriQwlOrhSvowK_l5-eSZJ.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/merriweather/v31/u-4B0qyriQwlOrhSvowK_l5-eTxCVx0ZbwLvKH2Gk9hLmp0v5yA-xXPqCzLvPee1XYk_XSf-FmTCUF3w.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Merriweather';
   font-style: italic;
   font-weight: 700;
+  font-stretch: normal;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4l0qyriQwlOrhSvowK_l5-eR71Wsf_.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/merriweather/v31/u-4B0qyriQwlOrhSvowK_l5-eTxCVx0ZbwLvKH2Gk9hLmp0v5yA-xXPqCzLvPee1XYk_XSf-FmQlV13w.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Merriweather';
   font-style: italic;
   font-weight: 900;
+  font-stretch: normal;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4l0qyriQwlOrhSvowK_l5-eR7NWMf_.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/merriweather/v31/u-4B0qyriQwlOrhSvowK_l5-eTxCVx0ZbwLvKH2Gk9hLmp0v5yA-xXPqCzLvPee1XYk_XSf-FmRrV13w.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Merriweather';
   font-style: normal;
   font-weight: 300;
+  font-stretch: normal;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4n0qyriQwlOrhSvowK_l521wRpXw.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/merriweather/v31/u-4D0qyriQwlOrhSvowK_l5UcA6zuSYEqOzpPe3HOZJ5eX1WtLaQwmYiScCmDxhtNOKl8yDrgCcqEw.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Merriweather';
   font-style: normal;
   font-weight: 400;
+  font-stretch: normal;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/merriweather/v30/u-440qyriQwlOrhSvowK_l5Oew.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/merriweather/v31/u-4D0qyriQwlOrhSvowK_l5UcA6zuSYEqOzpPe3HOZJ5eX1WtLaQwmYiScCmDxhtNOKl8yDr3icqEw.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Merriweather';
   font-style: normal;
   font-weight: 700;
+  font-stretch: normal;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4n0qyriQwlOrhSvowK_l52xwNpXw.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/merriweather/v31/u-4D0qyriQwlOrhSvowK_l5UcA6zuSYEqOzpPe3HOZJ5eX1WtLaQwmYiScCmDxhtNOKl8yDrOSAqEw.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Merriweather';
   font-style: normal;
   font-weight: 900;
+  font-stretch: normal;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/merriweather/v30/u-4n0qyriQwlOrhSvowK_l52_wFpXw.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/merriweather/v31/u-4D0qyriQwlOrhSvowK_l5UcA6zuSYEqOzpPe3HOZJ5eX1WtLaQwmYiScCmDxhtNOKl8yDrdyAqEw.ttf) format('truetype');
 }
 :root {
   --color-green-high: #164A41;
@@ -71,6 +79,9 @@ html,
 body {
   width: 100%;
   height: 100%;
+}
+.no-scroll {
+  overflow: hidden;
 }
 h1 {
   color: var(--color-highlight);
@@ -137,7 +148,7 @@ h2 {
   color: var(--color-highlight);
   border-bottom: #F1B24A 2px solid;
 }
-#inicio #header-mobile {
+#inicio .mobile {
   display: none;
 }
 #inicio #banner {
@@ -283,10 +294,10 @@ h2 {
   width: 40%;
 }
 #formulario #container-formulario form .box-formulario-endereco #complementos .box-formulario-input:nth-child(2) {
-  width: 40%;
+  width: 20%;
 }
 #formulario #container-formulario form .box-formulario-endereco #complementos .box-formulario-input:nth-child(3) {
-  width: 20%;
+  width: 40%;
 }
 #formulario #container-formulario form .box-formulario-contato {
   width: 100%;
@@ -408,47 +419,62 @@ footer p {
   .container {
     padding: 0 4%;
   }
-  #inicio #header-desktop {
-    display: none;
-  }
-  #inicio #header-mobile {
-    display: flex;
-    align-items: center;
+  #inicio header {
     justify-content: space-between;
     gap: 0;
     position: relative;
   }
-  #inicio #header-mobile #logo {
+  #inicio header .mobile {
+    display: flex;
+  }
+  #inicio header #logo {
     height: 30px;
   }
-  #inicio #header-mobile h1 {
+  #inicio header h1 {
     text-wrap: nowrap;
     font-size: 28px;
     margin: 0;
   }
-  #inicio #header-mobile #menu-mobile {
-    display: flex;
+  #inicio header #menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: var(--color-highlight);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.6s ease-in-out;
+    overflow: hidden;
+    z-index: 98;
+  }
+  #inicio header #menu.active {
+    height: 100vh;
+  }
+  #inicio header #menu li {
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+  }
+  #inicio header #menu li a {
+    text-decoration: none;
+    color: var(--color-white);
+  }
+  #inicio header #menu li a:hover {
+    color: var(--color-green-high);
+  }
+  #inicio header #menu-mobile {
     align-items: center;
     justify-content: center;
     padding: 10px;
     background-color: var(--color-highlight);
     border-radius: 50%;
     z-index: 99;
+    cursor: pointer;
   }
-  #inicio #header-mobile #menu-mobile img {
+  #inicio header #menu-mobile img {
     width: 20px;
-  }
-  #inicio #header-mobile #menu-mobile-list {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: var(--color-highlight);
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
   }
   #inicio #banner {
     flex-direction: column;
