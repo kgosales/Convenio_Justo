@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", () => {
 const menuMobile = () => {
     const menu = document.getElementById("menu");
     const menuMobileImg = document.getElementById("menu-mobile").querySelector("img");
-    
+
     document.querySelector("body").classList.toggle("no-scroll");
 
     menu.classList.toggle("active");
@@ -108,4 +108,10 @@ const menuMobile = () => {
         : "./assets/imgs/icons/menu.png";
 
     menu.addEventListener("click", () => menuMobile());
+}
+
+const reclameAqui = () => {
+    document.querySelector("#formulario").scrollIntoView({
+        behavior: 'smooth'
+    });
 }

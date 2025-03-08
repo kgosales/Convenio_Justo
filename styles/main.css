@@ -413,13 +413,11 @@ footer p {
   padding: 10px 0;
 }
 @media screen and (max-width: 720px) {
-  .mobile {
-    display: flex;
-  }
   .container {
     padding: 0 4%;
   }
   #inicio header {
+    height: 10%;
     justify-content: space-between;
     gap: 0;
     position: relative;
@@ -477,10 +475,17 @@ footer p {
     width: 20px;
   }
   #inicio #banner {
+    height: 90vh;
     flex-direction: column;
   }
   #inicio #banner #banner-texto h1 {
     display: none;
+  }
+  #inicio #banner #banner-texto h2#pergunta {
+    font-size: 36px;
+  }
+  #inicio #banner #banner-texto h2#pergunta span {
+    font-size: 36px;
   }
   #inicio #banner #banner-imagem {
     position: relative;

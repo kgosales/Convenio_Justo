@@ -427,10 +427,6 @@ footer {
 
 @media screen and (max-width: 720px) {
 
-    .mobile {
-        display: flex;
-    }
-
     .container {
         padding: 0 4%;
     }
@@ -438,6 +434,7 @@ footer {
     #inicio {
 
         header {
+            height: 10%;
             justify-content: space-between;
             gap: 0;
             position: relative;
@@ -506,11 +503,21 @@ footer {
         }
 
         #banner {
+            height: 90vh;
             flex-direction: column;
 
             #banner-texto {
+
                 h1 {
                     display: none;
+                }
+
+                h2#pergunta {
+                    font-size: 36px;
+
+                    span {
+                        font-size: 36px;
+                    }
                 }
             }
 
