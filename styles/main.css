@@ -418,7 +418,7 @@ footer p {
   color: var(--color-white);
   padding: 10px 0;
 }
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 1040px) {
   .container {
     padding: 0 4%;
   }
@@ -494,10 +494,10 @@ footer p {
     display: none;
   }
   #inicio #banner #banner-texto h2#pergunta {
-    font-size: 36px;
+    font-size: 32px;
   }
   #inicio #banner #banner-texto h2#pergunta span {
-    font-size: 36px;
+    font-size: 32px;
   }
   #inicio #banner #banner-imagem {
     width: 100%;
@@ -513,8 +513,9 @@ footer p {
   }
   #inicio #banner #banner-imagem #container-imagem img {
     position: absolute;
-    width: 65%;
+    height: 120%;
     bottom: 0;
+    object-fit: contain;
   }
   #sobre #container-sobre {
     flex-direction: column-reverse;
