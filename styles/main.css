@@ -506,13 +506,13 @@ footer p {
     align-items: flex-end;
   }
   #inicio #banner #banner-imagem #container-imagem {
-    position: static;
+    position: relative;
     border-radius: 50px 50px 0 0;
     height: 80%;
   }
   #inicio #banner #banner-imagem #container-imagem img {
     position: absolute;
-    width: 60%;
+    width: 65%;
     bottom: 0;
   }
   #sobre #container-sobre {
