@@ -78,9 +78,9 @@ const formatarTelefone = () => {
 
 const addOptionOperadoras = () => {
     const selectOperadoras = document.querySelector("#operadoras");
-    const operadoras = ["Amil", "Unimed", "Bradesco", "Sulamerica"];
+    const operadoras = ["Amil", "Bradesco", "Sulamerica", "Unimed", "Outras"];
 
-    operadoras.sort((a, b) => a.localeCompare(b));
+    // operadoras.sort((a, b) => a.localeCompare(b));
     operadoras.forEach(operadora => {
         const option = document.createElement("option");
         option.value = operadora;
@@ -89,11 +89,26 @@ const addOptionOperadoras = () => {
     });
 };
 
+const toggleBoxOutraOperadora = () => {
+    const selectOperadoras = document.querySelector("#operadoras");
+    const outraOperadoraBox = document.querySelector("#outra-operadora-box");
+
+    selectOperadoras.addEventListener("change", (event) => {
+        outraOperadoraBox.style.display = event.target.value === "Outras" ? "flex" : "hidden";
+        event.target.value === "Outras" ? outraOperadoraBox.classList.add("active") : outraOperadoraBox.classList.remove("active");
+
+        const input = outraOperadoraBox.querySelector("input");
+        input.required = event.target.value === "Outras";
+        input.value = "";
+    });
+};
+
 // Inicializar as funções necessárias
 document.addEventListener("DOMContentLoaded", () => {
     addOptionsUF();
     addOptionOperadoras();
     formatarTelefone();
+    toggleBoxOutraOperadora();
 });
 
 const menuMobile = () => {

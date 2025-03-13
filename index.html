@@ -4,7 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/imgs/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/imgs/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/imgs/favicon/favicon-32x32.png">
+    <link rel="manifest" href="./assets/imgs/favicon/site.webmanifest">
+    <link rel="stylesheet" href="./assets/styles/main.css">
     <title>Convênio Justo</title>
 </head>
 
@@ -75,39 +79,39 @@
     </section>
     <section id="formulario" class="section-abas">
         <div class="container">
-            <h2>Formulário</h2>
+            <h2>Reclame Aqui</h2>
             <div id="container-formulario">
                 <form action="#">
                     <div class="box-formulario-input">
                         <label for="nome">Nome:</label>
-                        <input type="text" id="nome" name="nome">
+                        <input type="text" id="nome" name="nome" required>
                     </div>
                     <div class="box-formulario-endereco">
                         <div id="logradouro">
                             <div class="box-formulario-input">
                                 <label for="endereco">Endereço:</label>
-                                <input type="text" id="endereco" name="endereco">
+                                <input type="text" id="endereco" name="endereco" required>
                             </div>
                             <div class="box-formulario-input">
                                 <label for="endereco-numero">Nº:</label>
-                                <input type="number" id="endereco-numero" name="endereco-numero">
+                                <input type="number" id="endereco-numero" name="endereco-numero" required>
                             </div>
                         </div>
                         <div id="complementos">
                             <div class="box-formulario-input">
                                 <label for="bairro">Bairro:</label>
-                                <input type="text" id="bairro" name="bairro">
+                                <input type="text" id="bairro" name="bairro" required>
                             </div>
                             <div class="box-formulario-input">
                                 <label for="uf">UF:</label>
-                                <select name="uf" id="uf">
+                                <select name="uf" id="uf" required>
                                     <option value="" disabled selected>-- Selecione um Estado --</option>
                                     <!-- Adicionado Dinamicamente -->
                                 </select>
                             </div>
                             <div class="box-formulario-input">
                                 <label for="cidade">Cidade:</label>
-                                <select name="cidade" id="cidade" disabled>
+                                <select name="cidade" id="cidade" disabled required>
                                     <option value="" disabled selected>-- Selecione uma Cidade --</option>
                                     <!-- Adicionado Dinamicamente -->
                                 </select>
@@ -117,23 +121,27 @@
                     <div class="box-formulario-contato">
                         <div class="box-formulario-input">
                             <label for="email">Email:</label>
-                            <input type="email" id="email" name="email">
+                            <input type="email" id="email" name="email" required>
                         </div>
                         <div class="box-formulario-input">
                             <label for="telefone">Telefone:</label>
-                            <input type="tel" id="telefone" name="telefone">
+                            <input type="tel" id="telefone" name="telefone" required>
                         </div>
                     </div>
                     <div class="box-formulario-input">
                         <label for="operadoras">Operadora:</label>
-                        <select name="operadoras" id="operadoras">
+                        <select name="operadoras" id="operadoras" required>
                             <option value="" disabled selected>-- Selecione uma Operadora --</option>
                             <!-- Adicionado Dinamicamente -->
                         </select>
                     </div>
+                    <div class="box-formulario-input" id="outra-operadora-box" style="display: hidden;">
+                        <label for="outra-operadora">Nome da Operadora:</label>
+                        <input type="text" id="outra-operadora" name="outra-operadora">
+                    </div>
                     <div class="box-formulario-input">
                         <label for="reclamacao">Reclamação:</label>
-                        <textarea id="reclamacao" name="reclamacao"></textarea>
+                        <textarea id="reclamacao" name="reclamacao" required></textarea>
                     </div>
                     <input type="submit" value="Enviar">
                 </form>
@@ -240,7 +248,7 @@
     <footer>
         <p>Todos os direitos reservados © 2024</p>
     </footer>
-    <script src="./javascripts/main.js"></script>
+    <script src="./assets/javascripts/main.js"></script>
 </body>
 
 </html>

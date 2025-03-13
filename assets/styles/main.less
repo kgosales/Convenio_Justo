@@ -318,6 +318,26 @@ h2 {
                     color: var(--color-white);
                 }
             }
+
+            #outra-operadora-box {
+                // width: 100%;
+                height: 0;
+                opacity: 0;
+                overflow: hidden;
+                visibility: hidden;
+                // transform: scaleY(0);
+                // transform-origin: top;
+                transition: height 0.4s ease, opacity 0.4s ease;
+                position: absolute;
+
+                &.active {
+                    height: 66px;
+                    opacity: 1;
+                    // transform: scaleY(1);
+                    position: relative;
+                    visibility: visible;
+                }
+            }
         }
     }
 }

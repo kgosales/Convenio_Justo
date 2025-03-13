@@ -328,6 +328,20 @@ h2 {
   background-color: var(--color-highlight);
   color: var(--color-white);
 }
+#formulario #container-formulario form #outra-operadora-box {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  visibility: hidden;
+  transition: height 0.4s ease, opacity 0.4s ease;
+  position: absolute;
+}
+#formulario #container-formulario form #outra-operadora-box.active {
+  height: 66px;
+  opacity: 1;
+  position: relative;
+  visibility: visible;
+}
 #sobre #container-sobre {
   display: flex;
   gap: 40px;

@@ -1,2 +1,0 @@
-- Formulário para e-mail
-- Blog
