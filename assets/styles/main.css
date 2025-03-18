@@ -386,13 +386,17 @@ h2 {
   top: -40px;
 }
 #depoimentos #container-depoimentos .box-depoimento .nome-depoimento {
-  width: 100%;
+  padding: 10px;
   text-align: center;
-  color: var(--color-highlight);
+  color: var(--color-green-high);
+  background-color: var(--color-highlight);
   font-size: 18px;
   font-weight: 600;
+  position: absolute;
+  top: -20px;
 }
 #depoimentos #container-depoimentos .box-depoimento .texto-depoimento {
+  margin-top: 15px;
   flex-grow: 1;
 }
 #contato {

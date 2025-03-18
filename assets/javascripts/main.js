@@ -103,14 +103,6 @@ const toggleBoxOutraOperadora = () => {
     });
 };
 
-// Inicializar as funções necessárias
-document.addEventListener("DOMContentLoaded", () => {
-    addOptionsUF();
-    addOptionOperadoras();
-    formatarTelefone();
-    toggleBoxOutraOperadora();
-});
-
 const menuMobile = () => {
     const menu = document.getElementById("menu");
     const menuMobileImg = document.getElementById("menu-mobile").querySelector("img");
@@ -130,3 +122,32 @@ const reclameAqui = () => {
         behavior: 'smooth'
     });
 }
+
+const setDepoimentos = () => {
+    fetch("./assets/json/depoimentos.json")
+        .then(response => response.json())
+        .then(data => {
+            const depoimentos = document.querySelector("#container-depoimentos");
+            let depoimentosHTML = "";
+
+            data.forEach(depoimento => {
+                depoimentosHTML += `
+                    <div class="box-depoimento">
+                        <p class="nome-depoimento">${depoimento.nome}</p>
+                        <p class="texto-depoimento">${depoimento.depoimento}</p>
+                    </div>
+                `;
+            });
+
+            depoimentos.innerHTML = depoimentosHTML;
+        })
+        .catch(error => console.error("Erro ao carregar depoimentos:", error));
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    addOptionsUF();
+    addOptionOperadoras();
+    formatarTelefone();
+    toggleBoxOutraOperadora();
+    setDepoimentos();
+});

@@ -1,0 +1,17 @@
+[
+    {
+        "img": "./assets/imgs/perfil.png",
+        "nome": "Tiago",
+        "depoimento": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam provident aut incidunt tenetur, cupiditate illo laborum, est ipsum quaerat ex consequuntur quas, facilis non. Laudantium sunt rerum doloribus hic in."
+    },
+    {
+        "img": "./assets/imgs/perfil.png",
+        "nome": "João",
+        "depoimento": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam provident aut incidunt tenetur, cupiditate illo laborum, est ipsum quaerat ex consequuntur quas, facilis non. Laudantium sunt rerum doloribus hic in."
+    },
+    {
+        "img": "./assets/imgs/perfil.png",
+        "nome": "Maria",
+        "depoimento": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam provident aut incidunt tenetur, cupiditate illo laborum, est ipsum quaerat ex consequuntur quas, facilis non. Laudantium sunt rerum doloribus hic in."
+    }
+]
