@@ -63,11 +63,11 @@
   src: url(https://fonts.gstatic.com/s/merriweather/v31/u-4D0qyriQwlOrhSvowK_l5UcA6zuSYEqOzpPe3HOZJ5eX1WtLaQwmYiScCmDxhtNOKl8yDrdyAqEw.ttf) format('truetype');
 }
 :root {
-  --color-green-high: #164A41;
-  --color-green-mid: #4D774E;
-  --color-green-low: #9DC88D;
-  --color-highlight: #F1B24A;
-  --color-white: #FFFFFF;
+  --color-green-high: #164a41;
+  --color-green-mid: #4d774e;
+  --color-green-low: #9dc88d;
+  --color-highlight: #f1b24a;
+  --color-white: #ffffff;
 }
 * {
   margin: 0;
@@ -145,7 +145,7 @@ h2 {
 }
 #inicio header #menu li a:hover {
   color: var(--color-highlight);
-  border-bottom: #F1B24A 2px solid;
+  border-bottom: #f1b24a 2px solid;
 }
 #inicio .mobile {
   display: none;
@@ -357,32 +357,61 @@ h2 {
   object-fit: cover;
   border-radius: 10px;
 }
-#depoimentos #container-depoimentos {
-  margin-top: 50px;
+#depoimentos #carrosel {
+  width: 100%;
+  margin-top: 15px;
   display: flex;
-  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  /* Novo ajuste para o movimento */
 }
-#depoimentos #container-depoimentos .box-depoimento {
-  width: 33.3%;
+#depoimentos #carrosel button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: var(--color-green-high);
+  color: var(--color-white);
+  font-size: 20px;
+  flex-shrink: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#depoimentos #carrosel #container-depoimentos {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  padding-top: 20px;
+  transition: transform 0.5s ease-in-out;
+  gap: 10px;
+  position: relative;
+}
+#depoimentos #carrosel #container-depoimentos .box-depoimento {
+  width: 45%;
   padding: 20px;
   border-radius: 10px;
   background-color: var(--color-green-high);
   color: var(--color-white);
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   justify-content: center;
+  flex-shrink: 0;
   gap: 10px;
   position: relative;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  opacity: 0.8;
 }
-#depoimentos #container-depoimentos .box-depoimento img {
+#depoimentos #carrosel #container-depoimentos .box-depoimento img {
   width: 75px;
   height: 75px;
   border-radius: 50%;
   position: absolute;
   top: -40px;
 }
-#depoimentos #container-depoimentos .box-depoimento .nome-depoimento {
+#depoimentos #carrosel #container-depoimentos .box-depoimento .nome-depoimento {
   padding: 10px;
   text-align: center;
   color: var(--color-green-high);
@@ -392,9 +421,17 @@ h2 {
   position: absolute;
   top: -20px;
 }
-#depoimentos #container-depoimentos .box-depoimento .texto-depoimento {
+#depoimentos #carrosel #container-depoimentos .box-depoimento .texto-depoimento {
   margin-top: 15px;
   flex-grow: 1;
+  text-align: center;
+}
+#depoimentos #carrosel #container-depoimentos .box-depoimento.ativo {
+  opacity: 1;
+}
+#depoimentos #carrosel #container-depoimentos.mover {
+  transform: translateX(-50%);
+  /* Ajusta a posição conforme necessário */
 }
 #contato {
   background-color: var(--color-green-mid);
@@ -529,12 +566,35 @@ footer p {
   #sobre #container-sobre img {
     width: 100%;
   }
-  #depoimentos #container-depoimentos {
-    flex-direction: column;
-    gap: 60px;
+  #depoimentos #carrosel {
+    /* Novo ajuste para o movimento */
   }
-  #depoimentos #container-depoimentos .box-depoimento {
+  #depoimentos #carrosel button {
+    width: 20px;
+    height: 20px;
+    font-size: 8px;
+  }
+  #depoimentos #carrosel #container-depoimentos {
     width: 100%;
+  }
+  #depoimentos #carrosel #container-depoimentos .box-depoimento {
+    width: 100%;
+  }
+  #depoimentos #carrosel #container-depoimentos .box-depoimento img {
+    top: -40px;
+  }
+  #depoimentos #carrosel #container-depoimentos .box-depoimento .nome-depoimento {
+    top: -20px;
+  }
+  #depoimentos #carrosel #container-depoimentos .box-depoimento .texto-depoimento {
+    text-align: center;
+  }
+  #depoimentos #carrosel #container-depoimentos .box-depoimento.ativo {
+    opacity: 1;
+  }
+  #depoimentos #carrosel #container-depoimentos.mover {
+    transform: translateX(-50%);
+    /* Ajusta a posição conforme necessário */
   }
   #contato #container-contato {
     flex-direction: column;

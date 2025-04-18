@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
 
 :root {
-    --color-green-high: #164A41;
-    --color-green-mid: #4D774E;
-    --color-green-low: #9DC88D;
-    --color-highlight: #F1B24A;
-    --color-white: #FFFFFF;
+    --color-green-high: #164a41;
+    --color-green-mid: #4d774e;
+    --color-green-low: #9dc88d;
+    --color-highlight: #f1b24a;
+    --color-white: #ffffff;
 }
 
 * {
@@ -58,7 +58,11 @@ h2 {
 #inicio {
     width: 100%;
     height: 100vh;
-    background: linear-gradient(to right, var(--color-green-high), var(--color-green-mid));
+    background: linear-gradient(
+        to right,
+        var(--color-green-high),
+        var(--color-green-mid)
+    );
 
     header {
         width: 100%;
@@ -92,7 +96,7 @@ h2 {
 
                     &:hover {
                         color: var(--color-highlight);
-                        border-bottom: #F1B24A 2px solid;
+                        border-bottom: #f1b24a 2px solid;
                     }
                 }
             }
@@ -133,7 +137,11 @@ h2 {
             width: 100%;
             height: 100%;
             position: absolute;
-            background: linear-gradient(to right, rgba(22, 74, 65, 0.5), rgba(22, 27, 97, 0.5));
+            background: linear-gradient(
+                to right,
+                rgba(22, 74, 65, 0.5),
+                rgba(22, 27, 97, 0.5)
+            );
         }
 
         #banner-texto {
@@ -362,47 +370,89 @@ h2 {
 }
 
 #depoimentos {
-    #container-depoimentos {
-        margin-top: 50px;
+    #carrosel {
+        width: 100%;
+        margin-top: 15px;
         display: flex;
-        gap: 20px;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
 
-        .box-depoimento {
-            width: 33.3%;
-            padding: 20px;
-            border-radius: 10px;
-            background-color: var(--color-green-high);
+        button {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: none;
+            background: var(--color-green-high);
             color: var(--color-white);
+            font-size: 20px;
+            flex-shrink: 0;
+            cursor: pointer;
             display: flex;
-            flex-direction: column;
-            align-items: flex-start;
+            align-items: center;
             justify-content: center;
+        }
+
+        #container-depoimentos {
+            width: 100%;
+            display: flex;
+            overflow: hidden;
+            padding-top: 20px;
+            transition: transform 0.5s ease-in-out;
             gap: 10px;
             position: relative;
 
-            img {
-                width: 75px;
-                height: 75px;
-                border-radius: 50%;
-                position: absolute;
-                top: -40px;
-            }
+            .box-depoimento {
+                width: 45%;
+                padding: 20px;
+                border-radius: 10px;
+                background-color: var(--color-green-high);
+                color: var(--color-white);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                flex-shrink: 0;
+                gap: 10px;
+                position: relative;
+                transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+                opacity: 0.8;
 
-            .nome-depoimento {
-                padding: 10px;
-                text-align: center;
-                color: var(--color-green-high);
-                background-color: var(--color-highlight);
-                font-size: 18px;
-                font-weight: 600;
-                position: absolute;
-                top: -20px;
-            }
+                img {
+                    width: 75px;
+                    height: 75px;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: -40px;
+                }
 
-            .texto-depoimento {
-                margin-top: 15px;
-                flex-grow: 1;
+                .nome-depoimento {
+                    padding: 10px;
+                    text-align: center;
+                    color: var(--color-green-high);
+                    background-color: var(--color-highlight);
+                    font-size: 18px;
+                    font-weight: 600;
+                    position: absolute;
+                    top: -20px;
+                }
+
+                .texto-depoimento {
+                    margin-top: 15px;
+                    flex-grow: 1;
+                    text-align: center;
+                }
+
+                &.ativo {
+                    opacity: 1;
+                }
             }
+        }
+
+        /* Novo ajuste para o movimento */
+        #container-depoimentos.mover {
+            transform: translateX(
+                -50%
+            ); /* Ajusta a posição conforme necessário */
         }
     }
 }
@@ -453,13 +503,11 @@ footer {
 }
 
 @media screen and (max-width: 1040px) {
-
     .container {
         padding: 0 4%;
     }
 
     #inicio {
-
         header {
             height: 10%;
             justify-content: space-between;
@@ -577,12 +625,42 @@ footer {
     }
 
     #depoimentos {
-        #container-depoimentos {
-            flex-direction: column;
-            gap: 60px;
+        #carrosel {
+            button {
+                width: 20px;
+                height: 20px;
+                font-size: 8px;
+            }
 
-            .box-depoimento {
+            #container-depoimentos {
                 width: 100%;
+
+                .box-depoimento {
+                    width: 100%;
+
+                    img {
+                        top: -40px;
+                    }
+
+                    .nome-depoimento {
+                        top: -20px;
+                    }
+
+                    .texto-depoimento {
+                        text-align: center;
+                    }
+
+                    &.ativo {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            /* Novo ajuste para o movimento */
+            #container-depoimentos.mover {
+                transform: translateX(
+                    -50%
+                ); /* Ajusta a posição conforme necessário */
             }
         }
     }

@@ -1,17 +1,52 @@
 [
     {
         "img": "./assets/imgs/perfil.png",
-        "nome": "Tiago",
-        "depoimento": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam provident aut incidunt tenetur, cupiditate illo laborum, est ipsum quaerat ex consequuntur quas, facilis non. Laudantium sunt rerum doloribus hic in."
+        "nome": "Ricardo Silva",
+        "depoimento": "\"Através do site, consegui orientação clara e prática para contestar o aumento do meu plano de saúde. Não esperava um resultado tão rápido!\""
     },
     {
         "img": "./assets/imgs/perfil.png",
-        "nome": "João",
-        "depoimento": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam provident aut incidunt tenetur, cupiditate illo laborum, est ipsum quaerat ex consequuntur quas, facilis non. Laudantium sunt rerum doloribus hic in."
+        "nome": "Renata Pereira",
+        "depoimento": "\"Graças ao site, consegui ver os meus direitos e contestar a negativa injusta do meu plano de saúde. Hoje posso continuar meu tratamento sem preocupações!\""
     },
     {
         "img": "./assets/imgs/perfil.png",
-        "nome": "Maria",
-        "depoimento": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam provident aut incidunt tenetur, cupiditate illo laborum, est ipsum quaerat ex consequuntur quas, facilis non. Laudantium sunt rerum doloribus hic in."
+        "nome": "Patrícia Santos",
+        "depoimento": "\"Segui os passos sugeridos no site e isso fez toda a diferença. Entrei com um processo e foi reajustado para um valor mais justo!\""
+    },
+    {
+        "img": "./assets/imgs/perfil.png",
+        "nome": "Mariana Costa",
+        "depoimento": "\"O aumento do plano estava fora do meu orçamento, tive medo de não conseguir manter o convênio, mas com o suporte do site, consegui reduzir o valor e receber o reembolso do valor que foi pago a mais.\""
+    },
+    {
+        "img": "./assets/imgs/perfil.png",
+        "nome": "Rafael Souza",
+        "depoimento": "\"Meu plano rejeitou a cobertura de exames importantes para meu tratamento, mas graças ao suporte do site, consegui reverter a decisão.\""
+    },
+    {
+        "img": "./assets/imgs/perfil.png",
+        "nome": "Rodrigo Costa",
+        "depoimento": "\"A negativa do plano foi frustrante, mas com as ferramentas oferecidas no site, consegui mostrar meus direitos e obter a cobertura sem maiores problemas.\""
+    },
+    {
+        "img": "./assets/imgs/perfil.png",
+        "nome": "Fernanda Lopes",
+        "depoimento": "\"Quando descobri o aumento abusivo do meu plano de saúde, acessei o site e encontrei orientações incríveis para fazer a reclamação. Foi fácil e rápido, e consegui uma redução considerável!\""
+    },
+    {
+        "img": "./assets/imgs/perfil.png",
+        "nome": "Fernanda Lima",
+        "depoimento": "\"Estava desesperada com a negativa do plano para meus exames. Encontrei o site e segui as instruções passo a passo e consegui na justiça a autorização!\""
+    },
+    {
+        "img": "./assets/imgs/perfil.png",
+        "nome": "Lucas Ferreira",
+        "depoimento": "\"Meu filho tem autismo e teve a cobertura da terapia ABA negada pelo convênio. Depois da reclamação que fiz pelo site, consegui orientações e pela via judicial as terapias foram autorizadas.\""
+    },
+    {
+        "img": "./assets/imgs/perfil.png",
+        "nome": "Carolina Oliveira",
+        "depoimento": "\"Quando meu plano de saúde negou a cobertura de exames essenciais, acessei o site e encontrei toda a orientação para lutar pelos meus direitos. O exame foi autorizado rapidamente!\""
     }
 ]
