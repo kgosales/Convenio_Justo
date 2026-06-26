@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Convênio Justo — Defenda seus direitos contra abusos do plano de saúde</title>
+<style>
+    /* ===== PALETA E RESET ===== */
+    :root {
+        --verde-escuro: #1c3b30;
+        --verde-medio: #2a5446;
+        --dourado: #e0a83c;
+        --dourado-hover: #c9922a;
+        --off-white: #f7f5f0;
+        --texto-escuro: #2b2b2b;
+        --branco: #ffffff;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+        font-family: 'Segoe UI', Arial, sans-serif;
+        color: var(--texto-escuro);
+        line-height: 1.6;
+        background: var(--off-white);
+    }
+    h1, h2, h3 { line-height: 1.2; }
+    a { text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .container { width: 90%; max-width: 1100px; margin: 0 auto; }
+
+    /* ===== BOTÕES ===== */
+    .btn {
+        display: inline-block;
+        background: var(--dourado);
+        color: var(--verde-escuro);
+        font-weight: 700;
+        padding: 14px 32px;
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background 0.25s, transform 0.15s;
+    }
+    .btn:hover { background: var(--dourado-hover); transform: translateY(-2px); }
+    .btn-outline {
+        background: transparent;
+        color: var(--branco);
+        border: 2px solid var(--branco);
+    }
+    .btn-outline:hover { background: var(--branco); color: var(--verde-escuro); }
+
+    /* ===== HEADER ===== */
+    header {
+        background: var(--verde-medio);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .header-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 0;
+    }
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--dourado);
+        font-size: 1.6rem;
+        font-weight: 700;
+        font-family: Georgia, serif;
+    }
+    .logo .shield { font-size: 1.8rem; }
+    nav ul { list-style: none; display: flex; gap: 26px; }
+    nav a { color: var(--branco); font-weight: 500; transition: color 0.2s; }
+    nav a:hover { color: var(--dourado); }
+    .menu-toggle { display: none; background: var(--dourado); border: none;
+        color: var(--verde-escuro); font-size: 1.5rem; padding: 6px 12px;
+        border-radius: 50%; cursor: pointer; }
+
+    /* ===== HERO ===== */
+    .hero {
+        position: relative;
+        min-height: 90vh;
+        display: flex;
+        align-items: center;
+        background: url('hero.jpg') center/cover no-repeat;
+    }
+    .hero::before {
+        content: "";
+        position: absolute; inset: 0;
+        background: linear-gradient(120deg, rgba(28,59,48,0.92) 35%, rgba(28,59,48,0.65) 100%);
+    }
+    .hero-content { position: relative; z-index: 2; max-width: 640px; color: var(--branco); }
+    .hero h1 { font-size: 2.6rem; margin-bottom: 24px; }
+    .hero h1 span { color: var(--dourado); }
+    .hero p { font-size: 1.15rem; margin-bottom: 32px; }
+    .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+
+    /* ===== SEÇÕES GERAIS ===== */
+    section { padding: 80px 0; }
+    .section-title {
+        color: var(--dourado);
+        font-size: 2rem;
+        margin-bottom: 28px;
+        display: inline-block;
+        border-bottom: 3px solid var(--dourado);
+        padding-bottom: 6px;
+    }
+    .bg-light { background: var(--off-white); }
+    .bg-white { background: var(--branco); }
+    .bg-green { background: var(--verde-escuro); color: var(--branco); }
+    .bg-green .section-title { color: var(--dourado); }
+    .text-center { text-align: center; }
+
+    /* ===== O QUE FAZEMOS ===== */
+    .fazemos p { max-width: 800px; font-size: 1.05rem; margin-bottom: 28px; }
+
+    /* ===== COMO FUNCIONA ===== */
+    .passos {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 28px;
+        margin: 40px 0;
+    }
+    .passo {
+        background: var(--branco);
+        border-radius: 12px;
+        padding: 32px 24px;
+        text-align: center;
+        box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+        border-top: 4px solid var(--dourado);
+    }
+    .passo .num {
+        width: 52px; height: 52px;
+        background: var(--verde-escuro);
+        color: var(--dourado);
+        border-radius: 50%;
+        display: flex; align-items: center; justify-content: center;
+        font-size: 1.4rem; font-weight: 700;
+        margin: 0 auto 18px;
+    }
+    .passo h3 { color: var(--verde-escuro); margin-bottom: 10px; }
+
+    /* ===== FORMULÁRIO ===== */
+    .form-wrap { max-width: 640px; margin: 0 auto; }
+    .form-wrap p.sub { margin-bottom: 28px; opacity: 0.9; }
+    .form-group { margin-bottom: 18px; }
+    .form-group label { display: block; margin-bottom: 6px; font-weight: 500; }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+        padding: 13px 16px;
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-family: inherit;
+    }
+    .form-group textarea { resize: vertical; min-height: 110px; }
+    .form-note { font-size: 0.85rem; opacity: 0.85; margin-top: 14px; text-align: center; }
+    .form-wrap .btn { width: 100%; margin-top: 8px; }
+
+    /* ===== SOBRE NÓS ===== */
+    .sobre-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 48px;
+        align-items: center;
+    }
+    .sobre-grid img { border-radius: 12px; box-shadow: 0 6px 18px rgba(0,0,0,0.1); }
+    .sobre-text p { margin-bottom: 18px; }
+
+    /* ===== DEPOIMENTOS ===== */
+    .depo-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        margin-top: 40px;
+    }
+    .depo-card {
+        background: var(--verde-escuro);
+        color: var(--branco);
+        border-radius: 12px;
+        padding: 28px 24px;
+        position: relative;
+    }
+    .depo-card .quote { font-style: italic; margin-bottom: 18px; }
+    .depo-card .author { color: var(--dourado); font-weight: 700; }
+    .depo-card .meta { font-size: 0.85rem; opacity: 0.8; }
+
+    /* ===== CONTATO ===== */
+    .contato-info { display: flex; flex-direction: column; gap: 16px; margin-top: 28px; }
+    .contato-info a { color: var(--branco); display: flex; align-items: center; gap: 12px; font-size: 1.1rem; }
+    .contato-info .icon { font-size: 1.4rem; }
+
+    /* ===== FOOTER ===== */
+    footer {
+        background: var(--verde-medio);
+        color: var(--branco);
+        text-align: center;
+        padding: 22px 0;
+        font-size: 0.9rem;
+    }
+
+    /* ===== WHATSAPP FLUTUANTE ===== */
+    .whats-float {
+        position: fixed;
+        bottom: 24px; right: 24px;
+        background: #25d366;
+        color: #fff;
+        width: 60px; height: 60px;
+        border-radius: 50%;
+        display: flex; align-items: center; justify-content: center;
+        font-size: 2rem;
+        box-shadow: 0 4px 14px rgba(0,0,0,0.3);
+        z-index: 200;
+        transition: transform 0.2s;
+    }
+    .whats-float:hover { transform: scale(1.1); }
+
+    /* ===== RESPONSIVO ===== */
+    @media (max-width: 768px) {
+        nav ul { display: none; }
+        .menu-toggle { display: block; }
+        .hero h1 { font-size: 1.9rem; }
+        .passos, .depo-grid { grid-template-columns: 1fr; }
+        .sobre-grid { grid-template-columns: 1fr; }
+        .hero-buttons { flex-direction: column; }
+    }
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+    <div class="container header-inner">
+        <div class="logo"><span class="shield">🛡️</span> Convênio Justo</div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#fazemos">O que fazemos</a></li>
+                <li><a href="#como-funciona">Como funciona</a></li>
+                <li><a href="#formulario">Análise gratuita</a></li>
+                <li><a href="#depoimentos">Depoimentos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+        <button class="menu-toggle" aria-label="Menu">&#9776;</button>
+    </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="inicio">
+    <div class="container hero-content">
+        <h1>Você tem sofrido abusividades com o seu <span>plano de saúde</span>?</h1>
+        <p>Reajuste abusivo na mensalidade ou procedimento médico negado sem justificativa? Você tem direito de contestar — e nós podemos te ajudar a fazer isso.</p>
+        <div class="hero-buttons">
+            <a href="#formulario" class="btn">Quero Analisar Meu Caso</a>
+            <a href="https://wa.me/5571997114891" class="btn btn-outline" target="_blank" rel="noopener">Falar pelo WhatsApp</a>
+        </div>
+    </div>
+</section>
+
+<!-- ===== O QUE FAZEMOS ===== -->
+<section class="fazemos bg-light" id="fazemos">
+    <div class="container">
+        <h2 class="section-title">O que fazemos?</h2>
+        <p>Auxiliamos consumidores a contestarem reajustes abusivos e negativas de cobertura dos planos de saúde. Se a sua operadora aumentou a mensalidade fora dos limites legais ou negou um procedimento garantido pela Agência Nacional de Saúde, você pode ter direito à reversão — e nós cuidamos de cada etapa desse processo por você.</p>
+        <a href="#formulario" class="btn">Verificar Meu Caso Gratuitamente</a>
+    </div>
+</section>
+
+<!-- ===== COMO FUNCIONA ===== -->
+<section class="bg-white text-center" id="como-funciona">
+    <div class="container">
+        <h2 class="section-title">Como funciona</h2>
+        <p>É simples, rápido e sem complicação.</p>
+        <div class="passos">
+            <div class="passo">
+                <div class="num">1</div>
+                <h3>Preencha o formulário</h3>
+                <p>Informe seus dados e nos conte qual é o problema com o seu plano. Leva menos de 2 minutos.</p>
+            </div>
+            <div class="passo">
+                <div class="num">2</div>
+                <h3>Analisamos o seu caso</h3>
+                <p>Nossa equipe avalia as informações e entra em contato pelo WhatsApp em até 24 horas para apresentar as opções disponíveis.</p>
+            </div>
+            <div class="passo">
+                <div class="num">3</div>
+                <h3>Você decide como prosseguir</h3>
+                <p>Explicamos tudo de forma clara e transparente. Só seguimos em frente com a sua autorização.</p>
+            </div>
+        </div>
+        <a href="#formulario" class="btn">Quero Começar Agora</a>
+    </div>
+</section>
+
+<!-- ===== FORMULÁRIO ===== -->
+<section class="bg-green" id="formulario">
+    <div class="container form-wrap">
+        <h2 class="section-title">Solicite sua análise gratuita</h2>
+        <p class="sub">Preencha os campos abaixo e nossa equipe entrará em contato pelo WhatsApp em até 24 horas.</p>
+        <form onsubmit="event.preventDefault(); alert('Obrigado! Em breve entraremos em contato.');">
+            <div class="form-group">
+                <label for="nome">Nome completo</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            <div class="form-group">
+                <label for="whats">WhatsApp</label>
+                <input type="tel" id="whats" name="whats" placeholder="(00) 00000-0000" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="operadora">Operadora</label>
+                <select id="operadora" name="operadora" required>
+                    <option value="">-- Selecione uma operadora --</option>
+                    <option>Amil</option>
+                    <option>Bradesco</option>
+                    <option>SulAmérica</option>
+                    <option>Unimed</option>
+                    <option>Outras</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="problema">Qual é o seu problema?</label>
+                <select id="problema" name="problema" required>
+                    <option value="">-- Selecione --</option>
+                    <option>Reajuste abusivo</option>
+                    <option>Procedimento negado</option>
+                    <option>Ambos</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="detalhes">Conte um pouco mais (opcional)</label>
+                <textarea id="detalhes" name="detalhes"></textarea>
+            </div>
+            <button type="submit" class="btn">Quero Resolver Meu Caso</button>
+            <p class="form-note">🔒 Seus dados estão seguros e não serão compartilhados com terceiros.</p>
+        </form>
+    </div>
+</section>
+
+<!-- ===== SOBRE NÓS ===== -->
+<section class="bg-light" id="sobre">
+    <div class="container">
+        <h2 class="section-title">Sobre nós</h2>
+        <div class="sobre-grid">
+            <img src="sobre.jpg" alt="Profissional analisando documentos de um consumidor">
+            <div class="sobre-text">
+                <p>O Convênio Justo nasceu para estar ao lado de quem enfrenta, sozinho, os abusos cometidos pelas operadoras de planos de saúde. Sabemos que lidar com reajustes excessivos ou ter um procedimento médico negado gera angústia, insegurança e prejuízo financeiro — e que a maioria das pessoas simplesmente não sabe por onde começar.</p>
+                <p>Nosso trabalho é simplificar esse caminho. Avaliamos o seu caso, orientamos sobre os seus direitos e acompanhamos cada etapa do processo para que você não precise enfrentar isso sozinho. Transparência e compromisso com o resultado fazem parte de tudo que fazemos.</p>
+                <a href="#formulario" class="btn">Fale com Nossa Equipe</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== DEPOIMENTOS ===== -->
+<section class="bg-white" id="depoimentos">
+    <div class="container">
+        <h2 class="section-title">Depoimentos</h2>
+        <div class="depo-grid">
+            <div class="depo-card">
+                <p class="quote">"O aumento do plano estava fora do meu orçamento e eu temia perder a cobertura. Com o suporte da equipe, consegui reduzir o valor e ainda recebi o reembolso do que havia pago a mais."</p>
+                <p class="author">Mariana C.</p>
+                <p class="meta">Salvador/BA · Reajuste abusivo</p>
+            </div>
+            <div class="depo-card">
+                <p class="quote">"Meu plano negou a cobertura de exames importantes para o meu tratamento, mas com o apoio da equipe consegui reverter a decisão."</p>
+                <p class="author">Rafael S.</p>
+                <p class="meta">Lauro de Freitas/BA · Procedimento negado</p>
+            </div>
+            <div class="depo-card">
+                <p class="quote">"Meu filho teve a cobertura da terapia negada pelo convênio. Após a orientação que recebi, as terapias foram autorizadas pela via judicial."</p>
+                <p class="author">Lucas F.</p>
+                <p class="meta">Feira de Santana/BA · Procedimento negado</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== CONTATO ===== -->
+<section class="bg-green" id="contato">
+    <div class="container">
+        <h2 class="section-title">Fale conosco</h2>
+        <p>Prefere falar diretamente com a nossa equipe? Entre em contato pelo WhatsApp ou e-mail. Estamos prontos para ouvir o seu caso e te mostrar o melhor caminho.</p>
+        <div class="contato-info">
+            <a href="https://wa.me/5571997114891" target="_blank" rel="noopener"><span class="icon">📱</span> (71) 99711-4891</a>
+            <a href="mailto:contato@conveniojusto.com.br"><span class="icon">✉️</span> contato@conveniojusto.com.br</a>
+        </div>
+        <br>
+        <a href="https://wa.me/5571997114891" class="btn" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+    <div class="container">Todos os direitos reservados © 2025 — Convênio Justo</div>
+</footer>
+
+<!-- ===== WHATSAPP FLUTUANTE ===== -->
+<a href="https://wa.me/5571997114891" class="whats-float" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">🟢</a>
+
+</body>
+</html>
