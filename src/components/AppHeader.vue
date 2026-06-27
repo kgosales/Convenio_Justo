@@ -57,6 +57,7 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 14px 0;
+    height: 100%;
 }
 
 .logo-link {
@@ -64,6 +65,7 @@ header {
     align-items: center;
     gap: 15px;
     text-decoration: none;
+    height: 100%;
 
     h1 {
         color: var(--dourado);
@@ -72,8 +74,7 @@ header {
     }
 
     .logo-img {
-        height: 40px;
-        /* altura sugerida para bater com o header */
+        height: 100%;
         width: auto;
     }
 }

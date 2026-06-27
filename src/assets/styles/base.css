@@ -1,0 +1,96 @@
+/* ===== PALETA E RESET ===== */
+:root {
+  --verde-escuro: #1c3b30;
+  --verde-medio: #2a5446;
+  --dourado: #e0a83c;
+  --dourado-hover: #c9922a;
+  --off-white: #f7f5f0;
+  --texto-escuro: #2b2b2b;
+  --branco: #ffffff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: var(--texto-escuro);
+  line-height: 1.6;
+  background: var(--off-white);
+}
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+/* ===== BOTÕES ===== */
+.btn {
+  display: inline-block;
+  background: var(--dourado);
+  color: var(--verde-escuro);
+  font-weight: 700;
+  padding: 14px 32px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.25s, transform 0.15s;
+}
+.btn:hover {
+  background: var(--dourado-hover);
+  transform: translateY(-2px);
+}
+.btn-outline {
+  background: transparent;
+  color: var(--branco);
+  border: 2px solid var(--branco);
+}
+.btn-outline:hover {
+  background: var(--branco);
+  color: var(--verde-escuro);
+}
+/* ===== SEÇÕES GERAIS ===== */
+section {
+  padding: 80px 0;
+  scroll-margin-top: 74.98px;
+}
+.section-title {
+  color: var(--dourado);
+  font-size: 2rem;
+  margin-bottom: 28px;
+  display: inline-block;
+  border-bottom: 3px solid var(--dourado);
+  padding-bottom: 6px;
+}
+.bg-light {
+  background: var(--off-white);
+}
+.bg-white {
+  background: var(--branco);
+}
+.bg-green {
+  background: var(--verde-escuro);
+  color: var(--branco);
+}
+.bg-green .section-title {
+  color: var(--dourado);
+}
+.text-center {
+  text-align: center;
+}
